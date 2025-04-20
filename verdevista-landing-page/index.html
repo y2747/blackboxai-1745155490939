@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VerdeVista - Embrace Nature, Embrace Beauty</title>
+  <meta name="description" content="VerdeVista - Premium eco-friendly skincare products. Discover natural beauty with sustainable skincare." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js" defer></script>
+  <style>
+    /* Tailwind base styles are included via CDN */
+  </style>
+</head>
+<body class="font-montserrat bg-white text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-green-100 shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiM0QkY1MjAiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzMCIgZmlsbD0iI0ZGRiIvPgo8L3N2Zz4K" alt="VerdeVista Logo" class="w-10 h-10" />
+        <span class="text-2xl font-bold text-green-700">VerdeVista</span>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-green-700 font-semibold">
+        <a href="index.html" class="hover:text-green-900">Home</a>
+        <a href="catalog.html" class="hover:text-green-900">Products</a>
+        <a href="about.html" class="hover:text-green-900">About Us</a>
+        <a href="contact.html" class="hover:text-green-900">Contact Us</a>
+        <a href="terms.html" class="hover:text-green-900">Terms &amp; Conditions</a>
+      </nav>
+      <div class="relative flex items-center space-x-4">
+        <button id="cart-button" aria-label="Shopping Cart" class="relative text-green-700 hover:text-green-900 focus:outline-none">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+        </button>
+        <!-- Cart dropdown panel -->
+        <div id="cart-dropdown" class="hidden absolute right-0 mt-2 w-80 bg-white border border-gray-300 rounded shadow-lg z-50 p-4">
+          <h3 class="text-lg font-semibold text-green-800 mb-4">Your Basket</h3>
+          <ul id="cart-items" class="max-h-64 overflow-y-auto space-y-3 mb-4">
+            <!-- Cart items will be dynamically inserted here -->
+          </ul>
+          <div class="flex justify-between items-center font-semibold text-green-800 mb-4">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button id="pay-now-button" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Pay Now</button>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-green-700 hover:text-green-900 focus:outline-none">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-green-50 p-4 space-y-2">
+      <a href="index.html" class="block text-green-700 font-semibold hover:text-green-900">Home</a>
+      <a href="catalog.html" class="block text-green-700 font-semibold hover:text-green-900">Products</a>
+      <a href="about.html" class="block text-green-700 font-semibold hover:text-green-900">About Us</a>
+      <a href="contact.html" class="block text-green-700 font-semibold hover:text-green-900">Contact Us</a>
+      <a href="terms.html" class="block text-green-700 font-semibold hover:text-green-900">Terms &amp; Conditions</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-green-50">
+    <div class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">Embrace Nature, Embrace Beauty</h1>
+        <p class="text-lg md:text-xl text-green-700 mb-6">Discover our premium, eco-friendly skincare products</p>
+        <a href="catalog.html" class="inline-block bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-800 transition">Shop Now</a>
+      </div>
+      <div class="md:w-1/2 mt-10 md:mt-0">
+<img src="https://www.bing.com/th?id=OPEC.o22zxfyYSU6Ujw474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="PureHydra Moisturizer" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Our Best-Selling Products</h2>
+    <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th?id=OPEC.o22zxfyYSU6Ujw474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="PureHydra Moisturizer" class="w-full h-64 object-cover rounded mb-4" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">PureHydra Moisturizer</h3>
+        <p class="text-green-700 mb-4">$29.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="1">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th?id=OPEC.xgl3fRfKhwk79g474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="GreenCleanser Facial Cleanser" class="w-full h-64 object-cover rounded mb-4" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">GreenCleanser Facial Cleanser</h3>
+        <p class="text-green-700 mb-4">$19.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="2">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th?id=OPEC.wXswspi%2fWXuHuQ474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="VitaC Serum" class="w-full h-64 object-cover rounded mb-4" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">VitaC Serum</h3>
+        <p class="text-green-700 mb-4">$34.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="3">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th/id/OIP.xhdQS-jFGow_9LfNrSXQBAHaHa?w=185&h=185&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="EcoToner Balancing Toner" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">EcoToner Balancing Toner</h3>
+        <p class="text-green-700 mb-4">$24.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="4">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th?id=OPEC.kNbJfWKlHgf%2brw474C474&o=5&pid=21.1&w=148&h=249&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="BambooExfoliant Gentle Scrub" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-green-700 font-semibold text-green-800 mb-2">BambooExfoliant Gentle Scrub</h3>
+        <p class="text-green-700 mb-4">$22.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="5">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th?id=OPEC.Br1krfs0q97SVQ474C474&o=5&pid=21.1&w=160&h=272&qlt=100&dpr=1&pcl=f5f5f5" alt="NightRepair Cream" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">NightRepair Cream</h3>
+        <p class="text-green-700 mb-4">$39.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="6">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story Section -->
+  <section class="bg-green-100 py-16">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-6">About VerdeVista</h2>
+      <p class="text-green-700 text-lg mb-6">At VerdeVista, we are committed to creating premium skincare products that not only enhance your beauty but also promote a sustainable future. Our eco-friendly packaging and natural ingredients reflect our dedication to the planet and your skin.</p>
+      <a href="about.html" class="inline-block bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-800 transition">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="container mx-auto px-4 py-16 max-w-md">
+    <h3 class="text-2xl font-semibold text-green-800 mb-4 text-center">Join Our Community</h3>
+    <p class="text-green-700 mb-6 text-center">Subscribe to receive updates, tips, and exclusive offers.</p>
+    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4">
+      <input type="email" id="newsletter-email" placeholder="Enter your email" required class="flex-grow px-4 py-3 rounded border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-600" />
+      <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-800 transition">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-200 py-8 mt-auto">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-green-800 text-sm">
+      <nav class="space-x-6 mb-4 md:mb-0">
+        <a href="about.html" class="hover:underline">About Us</a>
+        <a href="contact.html" class="hover:underline">Contact Us</a>
+        <a href="terms.html" class="hover:underline">Terms &amp; Conditions</a>
+      </nav>
+      <div class="flex space-x-6">
+        <a href="#" aria-label="Instagram" class="hover:text-green-900"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-green-900"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" aria-label="Pinterest" class="hover:text-green-900"><i class="fab fa-pinterest fa-lg"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-green-900"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+      <p class="mt-4 md:mt-0">© 2023 VerdeVista. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
