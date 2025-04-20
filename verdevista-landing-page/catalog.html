@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VerdeVista - Products Catalog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js" defer></script>
+</head>
+<body class="font-montserrat bg-white text-gray-800 min-h-screen flex flex-col">
+
+  <header class="bg-green-100 shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="logo.svg" alt="VerdeVista Logo" class="w-10 h-10" />
+        <span class="text-2xl font-bold text-green-700">VerdeVista</span>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-green-700 font-semibold">
+        <a href="index.html" class="hover:text-green-900">Home</a>
+        <a href="catalog.html" class="hover:text-green-900">Products</a>
+        <a href="about.html" class="hover:text-green-900">About Us</a>
+        <a href="contact.html" class="hover:text-green-900">Contact Us</a>
+        <a href="terms.html" class="hover:text-green-900">Terms &amp; Conditions</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <button id="cart-button" aria-label="Shopping Cart" class="relative text-green-700 hover:text-green-900 focus:outline-none">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">1</span>
+        </button>
+        <button id="mobile-menu-button" class="md:hidden text-green-700 hover:text-green-900 focus:outline-none">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden bg-green-50 p-4 space-y-2">
+      <a href="index.html" class="block text-green-700 font-semibold hover:text-green-900">Home</a>
+      <a href="catalog.html" class="block text-green-700 font-semibold hover:text-green-900">Products</a>
+      <a href="about.html" class="block text-green-700 font-semibold hover:text-green-900">About Us</a>
+      <a href="contact.html" class="block text-green-700 font-semibold hover:text-green-900">Contact Us</a>
+      <a href="terms.html" class="block text-green-700 font-semibold hover:text-green-900">Terms &amp; Conditions</a>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 py-16">
+    <h1 class="text-4xl font-extrabold text-green-800 mb-8 text-center">Our Products</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Product cards similar to index.html -->
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+<img src="https://www.bing.com/th?id=OPEC.o22zxfyYSU6Ujw474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="PureHydra Moisturizer" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">PureHydra Moisturizer</h3>
+        <p class="text-green-700 mb-4">$29.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="1">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://www.bing.com/th?id=OPEC.xgl3fRfKhwk79g474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="GreenCleanser Facial Cleanser" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">GreenCleanser Facial Cleanser</h3>
+        <p class="text-green-700 mb-4">$19.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="2">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://www.bing.com/th?id=OPEC.wXswspi%2fWXuHuQ474C474&o=5&pid=21.1&w=148&h=260&qlt=100&dpr=1&bw=6&bc=FFFFFF" alt="VitaC Serum" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">VitaC Serum</h3>
+        <p class="text-green-700 mb-4">$34.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="3">Add to Cart</button>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 flex flex-col">
+        <img src="https://www.bing.com/th/id/OIP.xhdQS-jFGow_9LfNrSXQBAHaHa?w=185&h=185&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="EcoToner Balancing Toner" class="rounded-lg shadow-lg mx-auto" width="160" height="272" />
+        <h3 class="text-lg font-semibold text-green-800 mb-2">EcoToner Balancing Toner</h3>
+        <p class="text-green-700 mb-4">$24.99</p>
+        <button class="bg-green-700 text-white py-2 rounded hover:bg-green-800 transition" data-product-id="4">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-green-200 py-8 mt-auto">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-green-800 text-sm">
+      <nav class="space-x-6 mb-4 md:mb-0">
+        <a href="about.html" class="hover:underline">About Us</a>
+        <a href="contact.html" class="hover:underline">Contact Us</a>
+        <a href="terms.html" class="hover:underline">Terms &amp; Conditions</a>
+      </nav>
+      <div class="flex space-x-6">
+        <a href="#" aria-label="Instagram" class="hover:text-green-900"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#" aria-label="Facebook" class="hover:text-green-900"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="#" aria-label="Pinterest" class="hover:text-green-900"><i class="fab fa-pinterest fa-lg"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-green-900"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+      <p class="mt-4 md:mt-0">© 2023 VerdeVista. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
